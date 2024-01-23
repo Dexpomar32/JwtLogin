@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:mysql://hedgebanan.beget.tech:3306/hedgebanan_login?noAccessToProcedureBodies=true
+    username: hedgebanan_login
+    password: LoginDB123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+server:
+  port: 8080
+authentication:
+  app:
+    jwtSecret: mySuperSecretAndLongKey123!@#$DSHJKFDSKFHJKbsdjdkbkjhHFHGgkJGHFhjCNVBGJBHJJGHJgKBKJ
+    ## 12 hours expiration time
+    jwtExpirationMs: 43200000
